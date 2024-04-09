@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+
+         */
+        let accounts=[
+            {
+                name:"minh",
+                password:"123456",
+                address:'hà nội'
+            },
+            {
+                name: "minh",
+                password: "123555",
+                address: 'ninh bình'
+            },
+             {
+                name: "minh",
+                password: "123555",
+                address: 'hcm'
+
+            }
+        ]
+        // kiểm tra xem trong mảng accounts có đối tượng mà ở ninh bình hay không?
+        let result= accounts.some((item,index, arr)=>{
+            return item.address=="ninh bình"
+        })
+        if(result){
+            console.log("có người ở ninh bình");
+        }else{
+            console.log("không có người ở ninh bình");
+        }
+    </script>
+</body>
+</html>

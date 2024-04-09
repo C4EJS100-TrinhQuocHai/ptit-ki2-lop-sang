@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        every : tất cả
+        tức là tất cả các phần tử trong mảng phải thỏa mãn điểu kiện
+        kết quả trả về true/flase
+         */
+        let numbers=[5,7,9,11,45];
+        // kiểm tra xem trong number này ,các phần tử có lớn hơn 5 hết hay không
+        let result=  numbers.every((item,index,arr)=>{
+            return item>5
+        })
+        console.log("result",result);
+
+        let students=[
+            {
+                name:"mai",
+                gender:"male",
+                address:"hn"
+            },
+             {
+                name: "nam",
+                gender: "female",
+                address: "hn"
+            },
+             {
+                name: "ngoc",
+                gender: "female",
+                address: "hn"
+            }
+        ]
+        /* 
+            1. Tất cả phần tử trong student có phải là nam không?
+            2. tất cả học sinh đều ở hn phải k
+         */
+        let check1= students.every(item=>item.gender==="male");
+        console.log(check1);
+    </script>
+</body>
+</html>
