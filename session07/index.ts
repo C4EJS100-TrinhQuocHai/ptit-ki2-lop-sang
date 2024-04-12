@@ -76,10 +76,10 @@ let person:{
      test1("text");
 
      /* 
-        6.type never
+        6.type never 
          thường dùng trong các vòng lặp vô tận
          tức là các vòng lặp chạy không có điểm dừng
-         để đo giá trị: 
+         để đo giá trị!: 
      */
      function typeNever():never {
         let a:number=1;
