@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    input {
+        position: relative;
+        text-align: center;
+        width: 400px;
+        height: 50px;
+    }
+
+    button {
+        height: 40px;
+        width: 80px;
+        border-radius: 20%;
+    }
+
+    body {
+        text-align: center;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <h2>Doan di anh em</h2>
+    <div id="show"></div>
+    <div>
+        <input type="text" id="ansewr" />
+        <div id="remaining"></div>
+    </div>
+    <button onclick="guess()">Guess</button>
+    <script>
+        let arr = ["duy", "long", "khai", "an", "thanh"];
+        let check = Math.floor(Math.random() * arr.length);
+        let word = arr[check]
+        let index = "";
+        let remaining = word.length;
+        for (let i = 0; i < word.length; i++) {
+            index += "*";
+        }
+        function guess() {
+            let input = document.getElementById("ansewr").value;
+            if (input === word) {
+                alert("win")
+
+            }
+            else {
+                remaining--
+                if (remaining == 0) {
+                    alert("thua")
+                }
+                remain()
+            }
+        }
+        function show() {
+            let html = `The word is :${index}`;
+            ;
+            document.getElementById("show").innerHTML = html;
+        }
+        show();
+        function remain() {
+            let html = ``;
+            html += `Remaining guess: ${remaining}`;
+            document.getElementById("remaining").innerHTML = html;
+        }
+        remain(); 
+    </script>
+</body>
+
+</html>
