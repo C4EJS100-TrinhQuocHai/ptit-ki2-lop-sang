@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+     dùng async-await để kiểm tra số nguyên tố
+     -giúp làm quyen cú pháp của async-await
+     -->
+     <script>
+        // khởi tạo hàm kiểm tra số nguyên tố
+        // hàm này sẽ return về 1 promise
+        // trong promise này sẽ kiểm tra xem có phải là số nguyên tố hay không
+        // nếu phải thì resolve về true
+        // nếu không phải thì resolve false
+         function isPrimeWithPromise(number) {
+                return new Promise((resolve, reject) => {
+                    // nếu không phải là số thì thông thông báo lỗi.
+                    if (typeof number !== 'number' || !Number.isInteger(number) || number < 2) {
+                        return resolve(false);
+                    }
+                    // kiểm tra có phải là số nguyên tố hay không?
+                    for (let i = 2; i <= Math.sqrt(number); i++) {
+                        if (number % i === 0) {
+                            return resolve(false);
+                        }
+                    }
+                    return resolve(true);
+                });
+            }
+            /**
+             * Kiểm tra số nguyên tố sử dụng async - await
+             */
+            async function isPrimeWithAsyncAwait(number) {
+                try {
+                    const result = await isPrimeWithPromise(number);
+                    return result;
+                } catch (error) {
+                    console.error(`Lỗi: ${error.message}`);
+                    return false;
+                }
+            }
+            // Triển khai hàm và in kết quả ra màn hình console
+            console.log(111);
+            setTimeout(() => {
+                console.log(222);
+            }, 1000);
+            console.log(333);
+            (async () => {
+                console.log(await isPrimeWithAsyncAwait(2)); // true
+                console.log(await isPrimeWithAsyncAwait(3)); // true
+                console.log(await isPrimeWithAsyncAwait(4)); // false
+
+                // Test các trường hợp lỗi
+                console.log(await isPrimeWithAsyncAwait(-1)); // false
+                console.log(await isPrimeWithAsyncAwait(1.5)); // false
+                console.log(await isPrimeWithAsyncAwait('5')); // false
+            })();
+            // (()=>{})() // iife
+            new Promise((resolve,reject)=>{
+                    // viết logic kiểm tra có phải số nguyên tố hay không
+                    /* 
+                        resolve (true||false)
+                     */
+            })
+
+            async function demo() {
+                // await nó chỉ đợi những tác vụ promise thôi
+                await new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log("1111");
+                        // khi tác vụ promise đó có resolve hoặc reject thì
+                        // tác vụ đấy mới được xem là hoàn thành, còn không thì pending
+                        resolve()
+                    }, 5000);
+                })
+                console.log("3333");
+            }
+            demo()
+     </script>
+</body>
+</html>

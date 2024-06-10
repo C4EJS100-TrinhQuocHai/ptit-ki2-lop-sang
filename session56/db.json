@@ -1,0 +1,31 @@
+{
+  "users": [
+      {
+          "name": "huyền trang",
+          "id": 4
+      },
+      {
+          "name": "thu kềnh",
+          "address": "quảng ninh",
+          "id": 6
+      },
+      {
+          "name": "phương anh",
+          "id": 7
+      },{
+          "name": "bình an",
+          "id": 8
+      },
+      {
+          "name": "an",
+          "id": 9
+      }
+
+  ],
+  "comments": [
+    {
+      "content": "quá hay",
+      "id": 1
+    }
+  ]
+}

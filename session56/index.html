@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 
+      1.db.json giúp tạo ra FAKE_API hoặc MOCK_API
+       + 2 team frontend và backend
+       + người làm backend sẽ viết ra những API cho lập trình viên frontend gọi lên
+       những API này để tương tác với database để lấy dữ liệu
+       + vấn đề người làm backend chưa kịp viết API thì người frontend sẽ đi tạo ra
+       những FAKE_API(MOCK_API) để tương tác với dữ liệu.
+      2. dùng postman để đi test các API
+      trong postman cung cấp đầy đủ các phương thức, tiêu chuẩn RESTfull API
+       Các phương thức làm việc chính
+         1. GET: lấy về dữ liệu (lấy bản ghi)
+            http://localhost:8080/users
+         2. POST: thêm mới dữ liệu (thêm bản ghi)
+          dùng phương thức POST
+          http://localhost:8080/users
+          tiếp theo vào body
+          chọn urlencoded
+          nhập các key và value rồi SEND
+         3. DELETE: xóa dữ liệu   (xóa bản ghi)
+         -khi xóa 1 bản ghi thì phải biết xóa bản ghi nào
+         -xóa phải có id 
+        phương thức DELETE: http://localhost:8080/users/1
+         4. PUT/PATCH : cập nhật dữ liệu (cập nhật bản ghi)
+          Phương thức PUT: CẬP NHẬT TOÀN BỘ.
+          khi cập nhật cũng phải lấy id bản ghi mà cập nhật 
+          Phương thức PATCH : CẬP NHẬT TỪNG TRƯỜNG CỦA BẢN GHI  
+         5. Sắp sếp các bản ghi theo điều kiện
+           1. sắp xếp theo tăng dần asc ascending
+           2. sắp xếp theo giảm dần desc descending
+           Ví dụ thầy muốn sắp xếp các bản ghi ở trong bảng users theo thứ tự thuộc tính
+           name tăng dần theo bảng chữ cái.
+            http://localhost:8080/users?_sort=name&_order=asc
+         6. Tìm kiếm
+         Thầy muốn  trong bảng users lấy ra các bản ghi có name =h
+         http://localhost:8080/users?name_like=h
+
+      Tại sao không test các API thông qua url trình duyệt tại vì URL của trình duyệt
+      chỉ test được phương thức get thôi.
+
+      //
+        
+       
+     -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 import  Button  from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card';
 import { FaCartArrowDown } from "react-icons/fa";
-
 export default function ReactBoostrap() {
   return (
     <div>
