@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "minh thu",
+      "email": "minhthu@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "bích ngọc",
+      "email": "ngoc@gmail.com"
+    },
+    {
+      "name": "huyền chang",
+      "id": 4
+    }
+  ],
+  "product": []
+}
