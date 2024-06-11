@@ -15,6 +15,7 @@ export default function Read() {
             })
             .catch(err => console.log(err))
     }, [])
+
     return (
         <div>Read
             {/* 

@@ -8,7 +8,7 @@ export default function Update() {
     */
     useEffect(() => {
         // khi update phải biết được id của user cần update
-        axios.put("http://localhost:8080/users/4", { name: "huyền chang" })
+        axios.put("http://localhost:8080/users/4", { name: "huyền chang111" })
     }, [])
     return (
         <div>Update</div>

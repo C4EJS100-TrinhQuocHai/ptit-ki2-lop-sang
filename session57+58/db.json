@@ -1,19 +1,28 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "minh thu",
-      "email": "minhthu@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "bích ngọc",
-      "email": "ngoc@gmail.com"
-    },
-    {
-      "name": "huyền chang",
-      "id": 4
-    }
-  ],
-  "product": []
+    "users": [
+        {
+            "id": 1,
+            "name": "minh thu",
+            "email": "minhthu@gmail.com",
+            "age": 25
+        },
+        {
+            "id": 11,
+            "name": "hoa",
+            "email": "hoa@gmail.com",
+            "age": 20
+        },
+        {
+            "id": 3,
+            "name": "bích ngọc",
+            "email": "ngoc@gmail.com",
+            "age": 22
+        },
+        {
+            "name": "huyền chang111",
+            "id": 4,
+            "age": 24
+        }
+    ],
+    "product": []
 }
