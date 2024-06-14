@@ -1,0 +1,20 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"minh thu"
+        }
+    ],
+    "jobs":[
+        {
+            "id":1,
+            "name":"code",
+            "status": false
+        },
+        {
+            "id": 2,
+            "name": "học lập trình",
+            "status": false
+        }
+    ]
+}
