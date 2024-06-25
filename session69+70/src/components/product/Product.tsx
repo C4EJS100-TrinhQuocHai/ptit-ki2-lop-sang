@@ -1,9 +1,19 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { Product } from "../../interface";
 export default function Products() {
     // lấy dữ liệu ở trong kho đi render
     const products: any = useSelector(state => state);
+    const disPatch = useDispatch();
     console.log("sản phẩm", products);
+
+    // hàm thêm sản phẩm vào giỏ hàng
+    const addToCart = (product: Product) => {
+        disPatch({
+            type: "ADD_TO_CART",
+            payload: product
+        }
+        )
+    }
     return (
         <div>Product
             <table border={1}>
@@ -20,7 +30,7 @@ export default function Products() {
                 <tbody>
                     {products.productReducer.map((product: Product, index: number) => {
                         return (
-                            <tr>
+                            <tr key={product.id}>
                                 <td>{index + 1}</td>
                                 <td>{product.name}</td>
                                 <td>{product.description}</td>
@@ -28,7 +38,7 @@ export default function Products() {
                                     <img src={product.image} alt="" />
                                 </td>
                                 <td>{product.price}</td>
-                                <td><button>add to cart</button></td>
+                                <td><button onClick={() => addToCart(product)}>add to cart</button></td>
                             </tr>
                         )
                     })}

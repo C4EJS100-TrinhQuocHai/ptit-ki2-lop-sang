@@ -7,3 +7,12 @@ export interface Product{
     stock:number,
     image:string
 }
+export interface ProductCart {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    stock: number;
+    image: string;
+    quantity:number
+}
